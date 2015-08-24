@@ -8,7 +8,7 @@ class ApiDefender < Rack::Throttle::Daily
     options = {
       # config file here
       :cache => Redis.new(:host => host, :port => port, :thread_safe => true, :db => db),
-      :key_prefix => "zubibu:#{Rails.env}:api_defender",
+      :key_prefix => "AppNameHere:#{Rails.env}:api_defender",
       # only 5000 request per day
       :max => 5000
     }
